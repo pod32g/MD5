@@ -147,7 +147,7 @@ void md5(const uint8_t *initial_msg, size_t initial_len, uint8_t *digest) {
 }
  
 int main(int argc, char **argv) {
-    char *msg = argv[1];
+    char *msg;
     size_t len;
     int i;
     uint8_t result[16];
@@ -156,6 +156,7 @@ int main(int argc, char **argv) {
         printf("usage: %s 'string'\n", argv[0]);
         return 1;
     }
+    msg = argv[1];
  
     len = strlen(msg);
  
